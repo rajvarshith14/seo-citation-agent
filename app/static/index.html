@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f2">
+  <title>Recall SEO — SEO & Citation Agent</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Recall SEO home"><span class="brand-mark">R</span><span>recall<span class="brand-light">seo</span></span></a>
+      <div class="topbar-right"><span class="eyebrow">SEO MEMORY WORKSPACE</span><span id="connection-pill" class="status-pill">Checking connections…</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><span class="eyebrow accent">YOUR SEO, WITH CONTEXT</span>
+          <h1>Make the next change<br><em>count.</em></h1>
+          <p>Page checks show what is happening now. Hindsight remembers what you tried, what you decided, and what happened next.</p>
+        </div>
+        <div class="hero-note"><span class="note-icon">✳</span><div><strong>A learning loop, not a one-off audit</strong><p>Analyze → act → measure → make a smarter next move.</p></div></div>
+      </section>
+
+      <section class="workspace-grid">
+        <aside class="panel analyze-panel">
+          <div class="panel-heading"><div><span class="step-label">01 / ANALYZE</span><h2>Choose a page</h2></div><span class="heading-icon">↗</span></div>
+          <form id="analyze-form">
+            <label for="url">Website page</label>
+            <input id="url" name="url" type="url" placeholder="https://yourwebsite.com/page" required>
+            <label for="keyword">Focus topic <span class="optional">OPTIONAL</span></label>
+            <input id="keyword" name="keyword" type="text" placeholder="e.g. handmade cedar soap">
+            <label for="competitor">Competitor page <span class="optional">OPTIONAL</span></label>
+            <input id="competitor" name="competitor" type="url" placeholder="https://competitor.com/page">
+            <button id="analyze-button" class="button-primary" type="submit"><span>Analyze page</span><span>→</span></button>
+            <p class="form-hint">Public HTML pages only. This checks a single page, not your whole site.</p>
+          </form>
+          <div class="privacy-note"><span>⌁</span><p>Your page is fetched for analysis. No changes are made to your site.</p></div>
+        </aside>
+
+        <section id="welcome-panel" class="panel welcome-panel">
+          <div class="welcome-art" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit-dot"></span><span class="orbit-center">↗</span></div>
+          <span class="step-label">YOUR WORKSPACE</span><h2>Good SEO remembers.</h2>
+          <p>Run your first analysis to create a dated baseline. Record a change and its outcome, then come back to see how Hindsight shapes the next recommendation.</p>
+          <div class="value-row"><span>01</span><div><strong>See the evidence</strong><small>Findings linked to the page that supports them.</small></div></div>
+          <div class="value-row"><span>02</span><div><strong>Keep the context</strong><small>Past decisions and results stay useful.</small></div></div>
+          <div class="value-row"><span>03</span><div><strong>Improve the next call</strong><small>Advice gets more specific as history grows.</small></div></div>
+        </section>
+      </section>
+
+      <section id="results" class="results hidden" aria-live="polite"></section>
+      <section id="history-section" class="history-section hidden">
+        <div class="section-title"><div><span class="step-label">MEMORY BANK</span><h2>What this site has learned</h2></div><button id="refresh-history" class="button-quiet">Refresh history ↻</button></div>
+        <div id="history-content"></div>
+      </section>
+      <div id="toast" class="toast hidden" role="status"></div>
+    </main>
+    <footer><span>RECALL SEO</span><span>Recommendations are evidence-led, not ranking guarantees.</span></footer>
+  </div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
